@@ -57,9 +57,8 @@ cabinreplace <- function(item) {
 }
 
 vcabin <- vapply(vcabin, cabinreplace, numeric(1))
-print(vcabin)
 csvtbl <- cbind(csvtbl, vcabin)
-glimpse(csvtbl)
+
 
 #Removing last row, when importing from csv, it is adding a blank row
 csvtbl <- csvtbl[-1310, ]
