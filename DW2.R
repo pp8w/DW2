@@ -61,6 +61,9 @@ print(vcabin)
 csvtbl <- cbind(csvtbl, vcabin)
 glimpse(csvtbl)
 
+#Removing last row, when importing from csv, it is adding a blank row
+csvtbl <- csvtbl[-1310, ]
+
 #Output
 write.csv(csvtbl, file = "titanic_clean.csv", row.names=FALSE)
 
